@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #8263A9;
+    color: #E1E0E3;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url(../fonts/Rubik/ofont.ru_Rubik.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat/Montserrat-ExtraLight.ttf);
+    font-weight: 100;
+    font-style: normal;
+}
+
+.auth1-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 610px;
+    margin: 40px 0;
+    background: url('../img/glass_90.png') center/cover no-repeat;
+    background-size: 450px 550px;
+}
+
+.auth2-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 900px;
+    margin: 40px 0;
+    background: url('../img/glass_90.png') center/cover no-repeat;
+    background-size: 700px 850px;
+}
+
+.auth-container h1 {
+    font-family: "Rubik";
+    font-size: 80px;
+    letter-spacing: -2px;
+    line-height: 90%;
+    color: #E1E0E3;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.auth-form input, .auth-form select {
+    padding: 20px 15px;
+    background-color: #8263A9;
+    border: 1px solid #E1E0E3;
+    font-size: 17px;
+    font-family: "Montserrat";
+    line-height: 110%;
+    letter-spacing: 10%;
+}
+
+.auth-form input::placeholder {
+    color: #E1E0E3;;
+}
+
+.auth-form select {
+    cursor: pointer;
+}
+
+.auth-submit {
+    padding: 15px 20px;
+    font-family: "Rubik";
+    line-height: 140%;
+    font-size: 20px;
+    color: #E1E0E3;
+    background-color: #442B5E;
+    border: none;
+}
+
+.auth-submit:hover {
+    background-color: #5a3e7a;
+}
+
+.auth-switch {
+    text-align: center;
+    margin-top: 25px;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    line-height: 110%;
+    letter-spacing: 10%;
+}
+
+.auth-switch a {
+    color: #442B5E;
+    text-decoration: none;
+}
+
+.auth-switch a:hover {
+    color: #E1E0E3;
+}
+
+.error-message {
+    background: rgba(255, 60, 100, 0.2);
+    border: 1px solid #ff4444;
+    border-radius: 16px;
+    padding: 10px;
+    color: #ff4444;
+    text-align: center;
+    font-family: 'Montserrat';
+    line-height: 110%;
+    letter-spacing: 10%;
+    margin-bottom: 20px;
+}
+
+/* Системные уведомления */
+.notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    pointer-events: none;
+}
+
+.notification {
+    background: rgba(85, 63, 107, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: auto;
+    width: 100%;
+    font-family: "Montserrat";
+}
+
+.notification.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.notification.hide {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+/* Типы уведомлений */
+.notification.success { border-color: #00ff00; }
+.notification.error { border-color: #ff4444; }
+.notification.warning { border-color: #ffaa00; }
+.notification.info { border-color: #00d4ff; }
+
+.notification.success .notification-icon { color: #00ff00; }
+.notification.error .notification-icon { color: #ff4444; }
+.notification.warning .notification-icon { color: #ffaa00; }
+.notification.info .notification-icon { color: #00d4ff; }
+
+.notification-icon {
+    font-size: 24px;
+    line-height: 1;
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-title {
+    font-family: "Rubik";
+    line-height: 140%;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: #E1E0E3;
+}
+
+.notification-message {
+    font-size: 14px;
+    color: #E1E0E3;
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
+.notification-close {
+    background: none;
+    border: none;
+    color: #E1E0E3;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 4px;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+
+.notification-close:hover {
+    opacity: 1;
+}

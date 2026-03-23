@@ -1,0 +1,410 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #8263A9;
+    color: #E1E0E3;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url(../fonts/Rubik/ofont.ru_Rubik.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat/Montserrat-ExtraLight.ttf);
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* общие правила для секций */
+.header, .section-1, .section-2, .section-3, .section-4, .section-5, .section-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+/* шапка */
+.header {
+    top: 0;
+}
+
+.header-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px auto 0;
+    padding: 0 20px;
+    width: 85%;
+}
+
+.header-logo {
+    width: 135px;
+    height: auto;
+}
+
+.header-ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    font-family: "Montserrat";
+    font-size: 23px;
+}
+
+.header-ul a {
+    text-decoration: none;
+    color: #E1E0E3;
+    transition: color 0.3s ease;
+}
+
+.header-ul a:hover {
+    color: #442B5E;
+}
+
+.header-ul li {
+    padding: 8px 5px;
+    letter-spacing: 2px;
+}
+
+.header-user {
+    display: flex;
+    align-items: center;
+}
+
+.login-link img {
+    width: 55px;
+    height: 55px;
+}
+
+/* Линия */
+.line {
+    height: 1.5px;
+    background: #442B5E;
+    width: 85%;
+    margin: 0 100px;
+}
+
+/* Главный блок */
+.section-2 {
+    position: relative;
+}
+
+.section2-div {
+    position: relative;
+    width: 85%;
+    height: 800px;
+    margin: 0 auto;
+}
+
+.section2-desktop, .section2-cursor, .section2-trophy, .section2-glass {
+    position: absolute;
+    pointer-events: none;
+}
+
+.section2-desktop   { top: 0;      left: 2%;      z-index: 1; }
+.section2-glass     { top: 15%;    left: 15%; width: 70%; height: 55%;}
+.section2-cursor    { top: 51%;    left: 30%;    z-index: 3; }
+.section2-trophy    { top: 57%;    right: 3%;     z-index: 1; height: 300px; }
+
+.section2-infa {
+    position: absolute;
+    top: 27%;
+    left: 23%;
+    text-align: center;
+    z-index: 2;
+}
+
+.section2-infa h1 {
+    font-family: "Rubik";
+    font-size: 160px;
+    letter-spacing: -2px;
+    line-height: 90%;
+}
+
+.section2-infa p {
+    font-family: "Montserrat";
+    font-size: 25px;
+}
+
+.join-link {
+    display: inline-block;
+    padding: 19px 52px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 32px;
+    background-color: #442B5E;
+    color: #E1E0E3;
+    font-family: "Rubik";
+    font-size: 28px;
+    text-decoration: none;
+}
+
+.join-link:hover {
+    background-color: #5a3e7a;
+}
+
+/* о нас */
+.section-3 {
+    clear: both;
+}
+
+.section3-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.section3-img {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 45%;
+}
+
+.section3-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.section3-grid img {
+    width: 100%;
+}
+
+.section3-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.section3-text h1 {
+    font-family: "Rubik";
+    font-size: 65px;
+    line-height: 90%;
+    letter-spacing: -1px;
+}
+
+.section3-text p {
+    font-family: "Montserrat";
+    font-size: 22px;
+    line-height: 140%;
+    letter-spacing: 10%;
+    text-align: justify;
+}
+
+/* направления */
+.section4-div {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.section4-text h1 {
+    font-family: "Rubik";
+    font-size: 80px;
+    letter-spacing: -2px;
+    line-height: 130%;
+}
+
+.section4-text p {
+    font-family: "Montserrat";
+    font-size: 22px;
+    line-height: 140%;
+    letter-spacing: 10%;
+}
+
+.section4-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 350px;
+    height: 450px;
+    gap: 20px;
+    background: url('../img/glass_90.png') center/cover no-repeat;
+    background-size: 350px 450px;
+}
+
+.card-icon {
+    width: 180px;
+    height: 180px;
+}
+
+.card h3 {
+    font-family: "Rubik";
+    font-size: 43px;
+    letter-spacing: -2px;
+    line-height: 100%;
+}
+
+.card p {
+    font-family: "Montserrat";
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: 10%;
+    width: 75%;
+}
+
+/* инфа */
+.section-5 {
+    background-color: #442B5E;
+}
+
+.section5-stats {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.stat-number {
+    font-family: "Rubik";
+    font-size: 55px;
+    letter-spacing: -2px;
+    line-height: 120%;
+}
+
+.stat-label {
+    font-family: "Montserrat";
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: 10%;
+}
+
+/* присоединиться */
+.section6-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.section6-img {
+    width: 40%;
+    height: auto;
+    margin: 0 3%;
+}
+
+.section6-right {
+    width: 45%;
+}
+
+.section6-right h1 {
+    font-family: "Rubik";
+    font-size: 65px;
+    letter-spacing: -2px;
+    line-height: 140%;
+}
+
+.section6-right p {
+    font-family: "Montserrat";
+    width: 85%;
+    font-size: 22px;
+    line-height: 110%;
+    letter-spacing: 10%;
+}
+
+.section6-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 3%;
+}
+
+.section6-form input {
+    padding: 20px 15px;
+    background-color: #8263A9;
+    border: 1px solid #E1E0E3;
+    font-size: 17px;
+    font-family: "Montserrat";
+    line-height: 110%;
+    letter-spacing: 10%;
+}
+
+.section6-form input::placeholder {
+    color: #E1E0E3;
+}
+
+.form-submit {
+    padding: 15px 20px;
+    font-family: "Rubik";
+    line-height: 140%;
+    font-size: 20px;
+    color: #E1E0E3;
+    background-color: #442B5E;
+    border: none;
+}
+
+.form-submit:hover {
+    background-color: #5a3e7a;
+}
+
+/* подвал */
+.footer {
+    background-color: #442B5E;
+    padding: 30px 30px;
+}
+
+.footer-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.footer p {
+    font-family: "Montserrat";
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: 10%;
+}
+
+.footer a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: "Montserrat";
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: 10%;
+    color: #E1E0E3;
+    text-decoration: none;
+}

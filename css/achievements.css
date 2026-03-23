@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #8263A9;
+    color: #E1E0E3;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url(../fonts/Rubik/ofont.ru_Rubik.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat/Montserrat-ExtraLight.ttf);
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* общие стили для секций */
+.header, .section-1, .section-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+/* шапка */
+.header {
+    top: 0;
+}
+
+.header-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px auto 0;
+    padding: 0 20px;
+    width: 85%;
+}
+
+.header-logo { width: 135px; height: auto; }
+
+.header-ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    font-family: "Montserrat";
+    font-size: 23px;
+}
+
+.header-ul a {
+    text-decoration: none;
+    color: #E1E0E3;
+    transition: color 0.3s ease;
+}
+
+.header-ul a:hover { color: #442B5E; }
+
+.header-ul li { padding: 8px 5px; letter-spacing: 2px; }
+
+.header-user {
+    display: flex;
+    align-items: center;
+}
+
+.login-link img {
+    width: 55px;
+    height: 55px;
+}
+
+/* линия */
+.line {
+    height: 1.5px;
+    background: #442B5E;
+    width: 85%;
+    margin: 0 100px;
+}
+
+/* достижения */
+.section2-div {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section2-div h1 {
+    font-family: "Rubik";
+    font-size: 80px;
+    letter-spacing: -2px;
+    line-height: 120%;
+}
+
+.pobedy-text {
+    font-family: "Montserrat";
+    font-size: 22px;
+    line-height: 140%;
+    letter-spacing: 10%;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pobedy-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.card {
+    position: relative;
+    background: url('../img/glass_90.png') center/cover no-repeat;
+    background-size: 400px 500px;
+    border-radius: 32px;
+    overflow: hidden;
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo {
+    width: 85%;
+    object-fit: cover;
+}
+
+.pobedy-info {
+    padding-top: 15px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.pobedy-info h3 {
+    font-family: "Rubik";
+    font-size: 35px;
+    line-height: 120%;
+    letter-spacing: -2px;
+}
+
+.date, .text {
+    font-family: "Montserrat";
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: 8%;
+}
+
+.achievements-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 40px 0;
+}
+
+
+
+
+.achievements-container {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.achievements-container h1 {
+    font-family: "Rubik";
+    font-size: 80px;
+    letter-spacing: -2px;
+    line-height: 120%;
+}
+
+.achievements-subtitle {
+    font-family: "Montserrat";
+    font-size: 22px;
+    line-height: 140%;
+    letter-spacing: 10%;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.achievement-card {
+    position: relative;
+    background: url('../img/glass_90.png') center/cover no-repeat;
+    background-size: 400px 500px;
+    border-radius: 32px;
+    overflow: hidden;
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.achievement-image {
+    width: 85%;
+    object-fit: cover;
+}
+
+.achievement-info {
+    padding-top: 15px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.achievement-info h3 {
+    font-family: "Rubik";
+    font-size: 35px;
+    line-height: 120%;
+    letter-spacing: -2px;
+}
+
+.achievement-date, .achievement-description {
+    font-family: "Montserrat";
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: 8%;
+}
+
+/* Мои достижения в ЛК */
+.my-achievements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.achievement-card-small {
+    background: rgba(130, 99, 169, 0.2);
+    border: 1px solid #7c3aed;
+    border-radius: 16px;
+    padding: 15px;
+}
+
+.achievement-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.achievement-header h3 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    color: #00d4ff;
+    margin: 0;
+}
+
+.achievement-card-small .achievement-date {
+    font-size: 12px;
+    margin: 0;
+}
+
+.achievement-card-small .achievement-description {
+    font-size: 14px;
+}
+
+/* подвал */
+.footer {
+    background-color: #442B5E;
+    padding: 30px;
+}
+
+.footer-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.footer p, .footer a {
+    font-family: "Montserrat";
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: 10%;
+}
+
+.footer a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #E1E0E3;
+    text-decoration: none;
+}

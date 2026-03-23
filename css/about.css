@@ -1,0 +1,482 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #8263A9;
+    color: #E1E0E3;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url(../fonts/Rubik/ofont.ru_Rubik.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat/Montserrat-ExtraLight.ttf);
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* общие правила для секций */
+.header, .section-1, .section-2, .section-3, .section-4, .section-5, .section6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+/* шапка */
+.header {
+    top: 0;
+}
+
+.header-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px auto 0;
+    padding: 0 20px;
+    width: 85%;
+}
+
+.header-logo {
+    width: 135px;
+    height: auto;
+}
+
+.header-ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    font-family: "Montserrat";
+    font-size: 23px;
+}
+
+.header-ul a {
+    text-decoration: none;
+    color: #E1E0E3;
+    transition: color 0.3s ease;
+}
+
+.header-ul a:hover {
+    color: #442B5E;
+}
+
+.header-ul li {
+    padding: 8px 5px;
+    letter-spacing: 2px;
+}
+
+.header-user {
+    display: flex;
+    align-items: center;
+}
+
+.login-link img {
+    width: 55px;
+    height: 55px;
+}
+
+/* Линия */
+.line {
+    height: 1.5px;
+    background: #442B5E;
+    width: 85%;
+    margin: 0 100px;
+}
+
+/* наша история */
+.section-2 {
+    clear: both;
+}
+
+.section2-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.section2-photo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+.section2-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.section2-grid img {
+    width: 100%;
+}
+
+.section2-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.section2-text h1 {
+    font-family: "Rubik";
+    font-size: 80px;
+    line-height: 110%;
+    letter-spacing: -1px;
+}
+
+.section2-text p {
+    font-family: "Montserrat";
+    font-size: 22px;
+    line-height: 140%;
+    letter-spacing: 10%;
+    text-align: justify;
+}
+
+/* направления */
+.section3-div {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.section3-text h1 {
+    font-family: "Rubik";
+    font-size: 80px;
+    letter-spacing: -2px;
+    line-height: 130%;
+}
+
+.section3-text p {
+    font-family: "Montserrat";
+    font-size: 22px;
+    line-height: 140%;
+    letter-spacing: 10%;
+}
+
+.section3-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 350px;
+    height: 450px;
+    gap: 20px;
+    background: url('../img/glass_90.png') center/cover no-repeat;
+    background-size: 350px 450px;
+}
+
+.card-icon {
+    width: 180px;
+    height: 180px;
+}
+
+.card h3 {
+    font-family: "Rubik";
+    font-size: 43px;
+    letter-spacing: -2px;
+    line-height: 100%;
+}
+
+.card p {
+    font-family: "Montserrat";
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: 10%;
+    width: 75%;
+}
+
+/* команда */
+.section-4 {
+    flex-direction: column;
+}
+
+.section-4 h2 {
+    font-family: "Rubik";
+    font-size: 80px;
+    line-height: 130%;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+.team-text {
+    font-family: "Montserrat";
+    font-size: 22px;
+    line-height: 140%;
+    letter-spacing: 10%;
+    text-align: center;
+}
+
+.team-slider {
+    position: relative;
+    width: calc(350px * 3 + 60px * 2);
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.arrow-left, .arrow-right {
+    position: absolute;
+    top: 40%;
+    font-size: 30px;
+    color: #442B5E;
+    background-color: #8263A9;
+    padding: 35px 35px;
+    border-radius: 60%;
+    border: 1px solid #442B5E;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrow-left {
+    left: 0px;
+}
+
+.arrow-right {
+    right: 0px;
+}
+
+.arrow-left:hover, .arrow-right:hover {
+    background-color: #442B5E;
+    color: #E1E0E3;
+    border-color: #E1E0E3;
+}
+
+.team-slides {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    gap: 40px;
+    position: relative;
+}
+
+.team-card {
+    display: flex;
+    flex: 0 0 350px;
+    height: 550px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    pointer-events: none;
+    position: relative;
+    padding-top: 24px;
+    background: url('../img/glass_90.png') center/cover no-repeat;
+    background-size: 350px 530px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 0.55;
+    transform: scale(1);
+}
+
+.team-card.active {
+    opacity: 1;
+    transform: scale(1.06);
+    z-index: 2;
+}
+
+.photo {
+    width: auto;
+    height: 80%;
+    margin-top: 20px;
+}
+
+.team-info h3 {
+    font-family: "Rubik";
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+.team-info p {
+    font-family: "Montserrat";
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 10%;
+    text-align: center;
+}
+
+/* почему ITres? */
+
+.section5-div {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section5-div h1 {
+    font-family: "Rubik";
+    font-size: 80px;
+    line-height: 140%;
+    letter-spacing: -1px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section5-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.why-card {
+    position: relative;
+    background: url('../img/glass_90.png') center/cover no-repeat;
+    padding: 60px 40px;
+    background-size: 350px 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 16px;
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
+}
+
+.why-card h3 {
+    font-family: "Rubik";
+    font-size: 35px;
+    line-height: 140%;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+.why-card p {
+    font-family: "Montserrat";
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 10%;
+    text-align: center;
+}
+
+/* присоединиться */
+.section6-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.section6-img {
+    width: 40%;
+    height: auto;
+    margin: 0 3%;
+}
+
+.section6-right {
+    width: 45%;
+}
+
+.section6-right h1 {
+    font-family: "Rubik";
+    font-size: 65px;
+    letter-spacing: -2px;
+    line-height: 140%;
+}
+
+.section6-right p {
+    font-family: "Montserrat";
+    width: 85%;
+    font-size: 22px;
+    line-height: 110%;
+    letter-spacing: 10%;
+}
+
+.section6-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 3%;
+}
+
+.section6-form input {
+    padding: 20px 15px;
+    background-color: #8263A9;
+    border: 1px solid #E1E0E3;
+    font-size: 17px;
+    font-family: "Montserrat";
+    line-height: 110%;
+    letter-spacing: 10%;
+}
+
+.section6-form input::placeholder {
+    color: #E1E0E3;
+}
+
+.form-submit {
+    padding: 15px 20px;
+    font-family: "Rubik";
+    line-height: 140%;
+    font-size: 20px;
+    color: #E1E0E3;
+    background-color: #442B5E;
+    border: none;
+}
+
+.form-submit:hover {
+    background-color: #5a3e7a;
+}
+
+/* подвал */
+.footer {
+    background-color: #442B5E;
+    padding: 30px 30px;
+}
+
+.footer-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.footer p {
+    font-family: "Montserrat";
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: 10%;
+}
+
+.footer a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: "Montserrat";
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: 10%;
+    color: #E1E0E3;
+    text-decoration: none;
+}

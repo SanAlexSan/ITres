@@ -1,0 +1,136 @@
+/* Статистика */
+.stats-badge {
+    display: flex;
+    gap: 15px;
+}
+
+.badge {
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-family: "Montserrat";
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: 10%;
+}
+
+.badge.pending {
+    background: rgba(255, 255, 0, 0.2);
+    color: #ffff00;
+    border: 1px solid #ffff00;
+}
+
+/* Список заявок */
+.requests-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Карточка заявки */
+.request-card {
+    background: #8263A9;
+    backdrop-filter: blur(10px);
+    border: 1px solid #442B5E;
+    border-radius: 24px;
+    padding: 20px;
+    box-shadow: 0 0 30px #442B5E;
+}
+
+/* Шапка карточки */
+.request-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.request-header h3 {
+    font-family: "Rubik";
+    line-height: 140%;
+    font-size: 40px;
+    color: #E1E0E3;
+    margin: 0 0 5px 0;
+}
+
+.request-date {
+    font-family: "Montserrat";
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: 10%;
+}
+
+/* Статус-бейдж */
+.status-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-family: "Montserrat";
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: 10%;
+}
+
+/* Детали заявки */
+.request-details {
+    display: grid;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding: 15px 0;
+    border-top: 1px solid #442B5E;
+    border-bottom: 1px solid #442B5E;
+}
+
+.request-details p {
+    font-family: "Montserrat";
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: 10%;
+    color: #E1E0E3;
+    margin: 0;
+}
+
+.request-details a {
+    color: #E1E0E3;
+    text-decoration: none;
+}
+
+/* Кнопки действий */
+.request-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-contact {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 30px;
+    font-family: "Montserrat";
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: 10%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: rgba(0, 213, 255, 0.055);
+    color: #00d5ff;
+    border: 1px solid #00d4ff;
+}
+
+/* Пустое состояние */
+.empty-state {
+    text-align: center;
+    padding: 60px;
+    background: rgba(130, 99, 169, 0.2);
+    border-radius: 24px;
+    margin: 30px 0;
+}
+
+.empty-state p {
+    font-family: "Montserrat";
+    font-size: 30px;
+    line-height: 110%;
+    letter-spacing: 10%;
+    color: #E1E0E3;
+}

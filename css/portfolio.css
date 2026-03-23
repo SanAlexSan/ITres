@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #8263A9;
+    color: #E1E0E3;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url(../fonts/Rubik/ofont.ru_Rubik.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat/Montserrat-ExtraLight.ttf);
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* общие правила для секций */
+.header, .section-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+/* шапка */
+.header {
+    top: 0;
+}
+
+.header-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px auto 0;
+    padding: 0 20px;
+    width: 85%;
+}
+
+.header-logo {
+    width: 135px;
+    height: auto;
+}
+
+.header-ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    font-family: "Montserrat";
+    font-size: 23px;
+}
+
+.header-ul a {
+    text-decoration: none;
+    color: #E1E0E3;
+    transition: color 0.3s ease;
+}
+
+.header-ul a:hover {
+    color: #442B5E;
+}
+
+.header-ul li {
+    padding: 8px 5px;
+    letter-spacing: 2px;
+}
+
+.header-user {
+    width: 55px;
+    height: 55px;
+}
+
+/* Линия */
+.line {
+    height: 1.5px;
+    background: #442B5E;
+    width: 85%;
+    margin: 0 100px;
+}
+
+/* подвал */
+.footer {
+    background-color: #442B5E;
+    padding: 30px 30px;
+}
+
+.footer-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.footer p {
+    font-family: "Montserrat";
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: 10%;
+}
+
+.footer a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: "Montserrat";
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: 10%;
+    color: #E1E0E3;
+    text-decoration: none;
+}
